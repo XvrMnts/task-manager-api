@@ -5,6 +5,9 @@ const Task = require('./models/task')
 const userRouter = require('./routers/user')
 const taskRouter = require('./routers/task')
 
+/* Heroku
+https://xvr-task-manager.herokuapp.com/ | https://git.heroku.com/xvr-task-manager.git */
+
 const app = express()
 const port = process.env.PORT
 
