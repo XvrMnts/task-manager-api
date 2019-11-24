@@ -3,11 +3,19 @@ validator = require('validator')
 
 const connectionUrl = process.env.MONGODB_URL
 
-mongoose.connect(connectionUrl+'/task-manager-api',{
+
+/* mongoose.connect(connectionUrl+'/task-manager-api',{
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
 })
+ */
+
+mongoose.connect(connectionUrl,{
+    dbName: "task-manager-api",
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: false
 
 const User = mongoose.model('User',{
     name: {
