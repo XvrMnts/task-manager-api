@@ -46,6 +46,7 @@ router.post('/users',async (req,res) => {
         sendWelcomeEmail(user.email,user.name)
         res.status(201).send({ user, token })
     } catch (e) {
+        console.log(e.stack)
         res.status(400).send(e.stack)
     }
 
